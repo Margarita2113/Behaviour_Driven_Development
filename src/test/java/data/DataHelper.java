@@ -24,7 +24,7 @@ public class DataHelper {
         String code;
     }
 
-    public static VerificationCode getVerificationCodeFor() {
+    public static VerificationCode getVerificationCode() {
         return new VerificationCode("12345");
     }
 
@@ -46,7 +46,7 @@ public class DataHelper {
         return new Random().nextInt(Math.abs(balance)) + 1; // принимает остаток на балансе карты списания и генерирует сумму остатка
     }
 
-    public static int generateInvalidBalance(int balance) {// вернет сумму, которая будет больше баланса, на случайное число от 0 до 10 000 тыс
+    public static int generateInvalidBalance(int balance) { // вернет сумму, которая будет больше баланса, на случайное число от 0 до 10 000 тыс
 
         return (Math.abs(balance)) + new Random().nextInt(10000);
     }
