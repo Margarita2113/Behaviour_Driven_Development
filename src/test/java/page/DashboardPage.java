@@ -40,19 +40,11 @@ public class DashboardPage {
     private int extractBalance(String text) {
 
 
-        val start = text.indexOf(toUtf8(balanceStart));
-        val finish = text.indexOf(toUtf8(balanceFinish));
-        val value = text.substring(start + toUtf8(balanceStart).length(), finish);
+        val start = text.indexOf(balanceStart);
+        val finish = text.indexOf(balanceFinish);
+        val value = text.substring(start + balanceStart.length(), finish);
         return Integer.parseInt(value);
     }
 
-    public static String toUtf8(String text) {
-        String utfString = "";
-        try {
-            utfString = new String(text.getBytes(), "UTF-8");
-        } catch (Exception e) {
-        }
-        return utfString;
-    }
 
 }
